@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Janim</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about">About</string>
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="notes">Notes</string>
+    <string name="favourites">Favourites</string>
+    <string name="home">Home</string>
+    <string name="open">OPEN</string>
+    <string name="close">CLOSE</string>
+    <string name="janim">Janim</string>
+    <string name="designed_by_jay">Designed by Jay.</string>
+    <string name="welcome_to_janim">Welcome to Janim</string>
+    <string name="enter_your_username_here">Enter your Username here</string>
+    <string name="enter_your_password_here">Enter your password here</string>
+    <string name="signin">SignIn</string>
+    <string name="signup">SignUp</string>
+    <string name="enter_your_lastname">Enter your Lastname</string>
+    <string name="enter_your_firsname">Enter your Firsname</string>
+</resources>
