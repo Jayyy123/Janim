@@ -1,7 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.MainActivity"/>
+    tools:context=".ui.activities.MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/background"
+            android:src="@drawable/g"
+            android:contentDescription="@string/background_image" />
+
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:backgroundTint="#0B0B2C"
+            android:theme="@style/cradle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bab"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_marginTop="18dp"
+                android:foregroundTint="@color/light_blue"
+                app:fabAlignmentMode="center"
+                app:fabAnimationMode="slide"
+                android:backgroundTint="#20205A"
+                app:fabCradleMargin="10dp"
+                app:fabCradleRoundedCornerRadius="7dp"
+                app:fabCradleVerticalOffset="0dp">
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bnv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="#20205A"
+                    app:itemIconSize="30dp"
+                    app:itemTextColor="#955606"
+                    app:itemIconTint="@color/wheat"
+                    app:menu="@menu/bottombar" />
+
+            </com.google.android.material.bottomappbar.BottomAppBar>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:backgroundTint="#054A81"
+                android:contentDescription="@string/fab_transformation_scrim_behavior"
+                android:src="@drawable/ic_add_foreground"
+                android:theme="@style/fab"
+                app:borderWidth="1dp"
+                app:layout_anchor="@id/bab"
+                app:maxImageSize="65dp" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#181845"
+        app:itemHorizontalPadding="100dp"
+        app:headerLayout="@layout/header"
+        app:itemIconSize="21dp"
+        android:layout_gravity="start"
+        app:itemIconTint="@color/wheat"
+        app:itemTextColor="#955606"
+        app:menu="@menu/sidebar"
+        app:itemVerticalPadding="40dp"
+        android:paddingVertical="10dp"/>
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

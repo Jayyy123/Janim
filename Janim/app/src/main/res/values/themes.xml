@@ -23,4 +23,24 @@
         <item name="strokeColor"> @color/white</item>
 
     </style>
+
+    <style name="cradle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#20205A</item>
+        <item name="backgroundTint">#20205A</item>
+
+    </style>
+
+
+    <style name="fab" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="floatingActionButtonLargePrimaryStyle">@color/wheat</item>
+        <item name="colorPrimary">@color/wheat</item>
+        <item name="floatingActionButtonPrimaryStyle">@color/wheat</item>
+        <item name="backgroundColor">@color/wheat</item>
+
+
+
+
+    </style>
 </resources>
