@@ -12,6 +12,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="drawerArrowStyle">@style/hamburger</item>
+
     </style>
 
     <style name="button" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -39,8 +41,23 @@
         <item name="floatingActionButtonPrimaryStyle">@color/wheat</item>
         <item name="backgroundColor">@color/wheat</item>
 
+    </style>
 
+    <style name="hamburger" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">#B1680A</item>
+        <item name="colorPrimary">#B1680A</item>
+        <item name="colorOutline">#B1680A</item>
+    </style>
 
+    <style name="propic" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="android:background">@drawable/profile</item>
+        <item name="shapeAppearance">@drawable/profile</item>
+        <item name="shapeAppearanceOverlay">@drawable/profile</item>
+        <item name="cornerRadius">100dp</item>
+        <item name="strokeWidth">3dp</item>
+        <item name="strokeColor">@color/wheat</item>
 
     </style>
 </resources>

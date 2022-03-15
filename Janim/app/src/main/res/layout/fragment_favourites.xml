@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.FavouritesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/favcounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add something to favourites to see them here"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#D58B27"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="13dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favourites"
+        android:layout_width="match_parent"
+        android:background="@drawable/recycler"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:scrollbars="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/favcounter"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,14 +1,492 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/c"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/profilepic"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/profile"
+        android:src="@drawable/ic_profile3_foreground"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="88dp"
+        android:orientation="vertical"
+        android:maxWidth="200dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profilepic"
+        android:layout_marginStart="9dp"
+        app:layout_constraintStart_toEndOf="@+id/profilepic"
+        app:layout_constraintTop_toTopOf="@+id/profilepic">
+
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:maxEms="20"
+            android:maxWidth="100dp"
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="0 Notes"
+            android:maxEms="20"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/settings"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        android:backgroundTint="#DA7C04"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/ic_settings_foreground"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilepic" />
+
+    <TextView
+        android:id="@+id/clickto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to Edit Settings"
+        app:layout_constraintBottom_toBottomOf="@+id/settings"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/settings"
+        app:layout_constraintTop_toTopOf="@+id/settings" />
+
+    <LinearLayout
+        android:id="@+id/settingsview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/card"
+        android:scrollbars="vertical"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings"
+        app:layout_constraintVertical_bias="0.631">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:background="@drawable/settingsv"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Edit Username"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:background="@drawable/settingsv"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Edit Firstname"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:background="@drawable/settingsv"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Edit Lastname"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:background="@drawable/settingsv"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Edit Password"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:background="@drawable/settingsv"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Edit Profile Picture"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:background="@drawable/settingsv"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Set new App theme"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:background="@drawable/settingsv"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Set App Background"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:background="@drawable/settingsv"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Create New Account"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:background="@drawable/settingsv"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Delete Account"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="9dp"
+            android:background="@drawable/settingsv"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/otherdeets"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp"
+            android:background="@drawable/settingsv"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/Ver"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/wheat"
+                android:background="@drawable/ic_phone_foreground"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="Add a phone number"
+                android:layout_marginTop="11dp"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp"
+            android:background="@drawable/settingsv"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/other2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/wheat"
+                android:background="@drawable/ic_email_foreground"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="Add an Email"
+                android:layout_marginTop="11dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp"
+            android:background="@drawable/settingsv"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/other3"
+                android:layout_width="45dp"
+                android:backgroundTint="@color/wheat"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_socials_foreground"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="Add Socials"
+                android:layout_marginTop="11dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp"
+            android:background="@drawable/settingsv"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/others4"
+                android:layout_width="45dp"
+                android:backgroundTint="@color/wheat"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_bio_foreground"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="Add bio"
+                android:layout_marginTop="11dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp"
+            android:background="@drawable/settingsv"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:backgroundTint="@color/wheat"
+                android:id="@+id/others5"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_invite_foreground"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="Invite your Friends"
+                android:layout_marginTop="11dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp"
+            android:background="@drawable/settingsv"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/others6"
+                android:backgroundTint="@color/wheat"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_chat_foreground"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="Chat with other Janim Users"
+                android:layout_marginTop="11dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp"
+            android:background="@drawable/settingsv"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/others7"
+                android:layout_width="45dp"
+                android:backgroundTint="@color/wheat"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_info_foreground"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="Get more information"
+                android:layout_marginTop="11dp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp"
+            android:background="@drawable/settingsv"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/other"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/wheat"
+                android:background="@drawable/ic_about_foreground"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="OtherApps like this one"
+                android:layout_marginTop="11dp"/>
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="10dp"
+            android:background="@drawable/settingsv"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/about"
+                android:layout_width="50dp"
+                android:backgroundTint="@color/wheat"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_about_foreground"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="About the Creator"
+                android:layout_marginTop="11dp"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
