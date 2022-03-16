@@ -10,7 +10,7 @@ import com.jay.janim.models.dataclass.Post
 
 class HomeAdapter : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
-    val imageList = ArrayList<Post>()
+    var imageList = ArrayList<Post>()
 
     inner class HomeViewHolder(val binding : HomerecyclersBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -22,7 +22,7 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
 
     override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
         val currenImage = imageList[position]
-
+        holder.binding.ap.setImageResource(currenImage.images)
     }
 
     override fun getItemCount(): Int {

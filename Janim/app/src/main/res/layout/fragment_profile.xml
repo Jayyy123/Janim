@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/c"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.ProfileFragment">
 
@@ -35,8 +34,7 @@
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Username"
-            android:layout_margin="10dp"
+            android:layout_marginTop="19dp"
             android:textColor="@color/white"
             android:maxEms="20"
             android:maxWidth="100dp"
@@ -45,6 +43,7 @@
 
 
         <TextView
+            android:id="@+id/favcount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="0 Notes"
@@ -79,21 +78,29 @@
         app:layout_constraintStart_toEndOf="@+id/settings"
         app:layout_constraintTop_toTopOf="@+id/settings" />
 
-    <LinearLayout
+
+    <ScrollView
         android:id="@+id/settingsview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/card"
-        android:scrollbars="vertical"
-        android:orientation="vertical"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:scrollbars="vertical"
+        android:layout_marginBottom="40dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/settings"
         app:layout_constraintVertical_bias="0.631">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/card"
+        android:orientation="vertical"
+>
 
         <TextView
             android:layout_width="match_parent"
@@ -208,285 +215,282 @@
 
 
     </LinearLayout>
+    </ScrollView>
 
-    <LinearLayout
+    <ScrollView
         android:id="@+id/otherdeets"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
         android:scrollbars="vertical"
-        android:layout_margin="10dp"
-        app:layout_constraintTop_toBottomOf="@id/settings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/settings">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
+            android:layout_height="0dp"
             android:layout_margin="10dp"
-            android:background="@drawable/settingsv"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settings">
 
-
-            <ImageButton
-                android:id="@+id/Ver"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:backgroundTint="@color/wheat"
-                android:background="@drawable/ic_phone_foreground"/>
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:text="Add a phone number"
-                android:layout_marginTop="11dp"/>
+                android:layout_margin="10dp"
+                android:background="@drawable/settingsv"
+                android:orientation="horizontal">
 
+
+                <ImageButton
+                    android:id="@+id/Ver"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_phone_foreground"
+                    android:backgroundTint="@color/wheat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Add a phone number"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/settingsv"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/other2"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_email_foreground"
+                    android:backgroundTint="@color/wheat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Add an Email"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:background="@drawable/settingsv"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/other3"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_socials_foreground"
+                    android:backgroundTint="@color/wheat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Add Socials"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:background="@drawable/settingsv"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/others4"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_bio_foreground"
+                    android:backgroundTint="@color/wheat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Add bio"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:background="@drawable/settingsv"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/others5"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_invite_foreground"
+                    android:backgroundTint="@color/wheat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Invite your Friends"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:background="@drawable/settingsv"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/others6"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_chat_foreground"
+                    android:backgroundTint="@color/wheat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Chat with other Janim Users"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:background="@drawable/settingsv"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/others7"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_info_foreground"
+                    android:backgroundTint="@color/wheat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Get more information"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:background="@drawable/settingsv"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/other"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_about_foreground"
+                    android:backgroundTint="@color/wheat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="sans-serif"
+                    android:text="OtherApps like this one"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/settingsv"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/about"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ic_about_foreground"
+                    android:backgroundTint="@color/wheat" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:fontFamily="sans-serif"
+                    android:text="About the Creator"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
 
 
         </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_margin="10dp"
-            android:background="@drawable/settingsv"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:id="@+id/other2"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:backgroundTint="@color/wheat"
-                android:background="@drawable/ic_email_foreground"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:text="Add an Email"
-                android:layout_marginTop="11dp"/>
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_margin="10dp"
-            android:background="@drawable/settingsv"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:id="@+id/other3"
-                android:layout_width="45dp"
-                android:backgroundTint="@color/wheat"
-                android:layout_height="45dp"
-                android:background="@drawable/ic_socials_foreground"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:text="Add Socials"
-                android:layout_marginTop="11dp"/>
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_margin="10dp"
-            android:background="@drawable/settingsv"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:id="@+id/others4"
-                android:layout_width="45dp"
-                android:backgroundTint="@color/wheat"
-                android:layout_height="45dp"
-                android:background="@drawable/ic_bio_foreground"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:text="Add bio"
-                android:layout_marginTop="11dp"/>
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_margin="10dp"
-            android:background="@drawable/settingsv"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:backgroundTint="@color/wheat"
-                android:id="@+id/others5"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:background="@drawable/ic_invite_foreground"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:text="Invite your Friends"
-                android:layout_marginTop="11dp"/>
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_margin="10dp"
-            android:background="@drawable/settingsv"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:id="@+id/others6"
-                android:backgroundTint="@color/wheat"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:background="@drawable/ic_chat_foreground"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:text="Chat with other Janim Users"
-                android:layout_marginTop="11dp"/>
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_margin="10dp"
-            android:background="@drawable/settingsv"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:id="@+id/others7"
-                android:layout_width="45dp"
-                android:backgroundTint="@color/wheat"
-                android:layout_height="45dp"
-                android:background="@drawable/ic_info_foreground"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:text="Get more information"
-                android:layout_marginTop="11dp"/>
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_margin="10dp"
-            android:background="@drawable/settingsv"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:id="@+id/other"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/wheat"
-                android:background="@drawable/ic_about_foreground"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:text="OtherApps like this one"
-                android:layout_marginTop="11dp"/>
-
-
-
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_margin="10dp"
-            android:background="@drawable/settingsv"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:id="@+id/about"
-                android:layout_width="50dp"
-                android:backgroundTint="@color/wheat"
-                android:layout_height="50dp"
-                android:background="@drawable/ic_about_foreground"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:textSize="20sp"
-                android:textColor="@color/white"
-                android:text="About the Creator"
-                android:layout_marginTop="11dp"/>
-
-
-
-        </LinearLayout>
-
-    </LinearLayout>
-
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

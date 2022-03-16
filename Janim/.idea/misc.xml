@@ -21,8 +21,8 @@
         <entry key="app/src/main/res/layout/favouritesrecycler.xml" value="0.13728470111448834" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/fragment_add.xml" value="0.13728470111448834" />
-        <entry key="app/src/main/res/layout/fragment_favourites.xml" value="0.28229166666666666" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2754098360655738" />
+        <entry key="app/src/main/res/layout/fragment_favourites.xml" value="0.23825503355704697" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2508833922261484" />
         <entry key="app/src/main/res/layout/fragment_note.xml" value="0.19458160400390623" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.28249969482421877" />
         <entry key="app/src/main/res/layout/header.xml" value="0.5660826137121446" />

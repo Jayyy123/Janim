@@ -189,7 +189,7 @@ class LockActivity : BaseActivity() {
                     ).show()
                     helper = true
                     status = true
-                    appuser = username
+                    appuserf = username
                     finish()
 
                 } else {

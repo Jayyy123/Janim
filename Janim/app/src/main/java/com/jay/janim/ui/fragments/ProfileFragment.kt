@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.jay.janim.R
 import com.jay.janim.databinding.FragmentProfileBinding
+import com.jay.janim.utils.Constants.appuserf
 
 class ProfileFragment : Fragment(R.layout.fragment_profile){
 
@@ -16,6 +17,9 @@ class ProfileFragment : Fragment(R.layout.fragment_profile){
         lateinit var binding:FragmentProfileBinding
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentProfileBinding.bind(view)
+
+
+        binding.username.text = appuserf
 
         binding.settings.setOnClickListener {
 

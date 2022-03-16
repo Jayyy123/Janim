@@ -15,7 +15,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.jay.janim.R
 import com.jay.janim.databinding.ActivityMainBinding
+import com.jay.janim.ui.adapters.HomeAdapter
 import com.jay.janim.ui.base.BaseActivity
+import com.jay.janim.utils.Constants.status
 
 class MainActivity : BaseActivity() {
 
@@ -73,7 +75,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun helpers(){
-        if (helper){
+        if (status){
 
             binding.helpers.visibility = View.VISIBLE
             helpersGone()
@@ -99,8 +101,8 @@ class MainActivity : BaseActivity() {
 
 
                 handler.postDelayed({
-                    a3.visibility = View.VISIBLE
-                    yu3.visibility = View.VISIBLE
+                    a5.visibility = View.VISIBLE
+                    yu5.visibility = View.VISIBLE
                     handler.postDelayed({
                         helpersGone()
                     },700)
@@ -127,11 +129,11 @@ class MainActivity : BaseActivity() {
 
                 handler.postDelayed({
 
-                    a5.visibility = View.VISIBLE
+                    a3.visibility = View.VISIBLE
                     a6.visibility = View.VISIBLE
                     a7.visibility = View.VISIBLE
                     a8.visibility = View.VISIBLE
-                    yu5.visibility = View.VISIBLE
+                    yu3.visibility = View.VISIBLE
 
                     handler.postDelayed({
                         helpersGone()
@@ -139,9 +141,23 @@ class MainActivity : BaseActivity() {
 
                 },6500)
 
+                handler.postDelayed({
+                    binding.progressBar.visibility = View.VISIBLE
+                    handler.postDelayed({
+                        binding.progressBar.visibility = View.GONE
+                    },3000)
+
+                },8100)
+
             }
             helper = false
+        }else{
+
+            binding.progressBar.visibility = View.VISIBLE
+            handler.postDelayed({
+                binding.progressBar.visibility = View.GONE
+            },3000)
+
         }
     }
-
 }
