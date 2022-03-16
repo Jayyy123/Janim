@@ -20,6 +20,7 @@ import com.jay.janim.ui.viewmodels.LockViewModel
 import com.jay.janim.utils.Constants
 import com.jay.janim.utils.viewmodelproviderfactory.UserViewModelProviderFactory
 import com.jay.janim.utils.Constants.appuserf
+import com.jay.janim.utils.Constants.status
 
 class LockActivity : BaseActivity() {
 
@@ -187,6 +188,7 @@ class LockActivity : BaseActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                     helper = true
+                    status = true
                     appuser = username
                     finish()
 

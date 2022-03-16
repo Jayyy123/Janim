@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.jay.janim.R
 import com.jay.janim.databinding.FragmentHomeBinding
 import com.jay.janim.utils.Constants.appuserf
+import com.jay.janim.utils.Constants.status
 
 class HomeFragment : Fragment(R.layout.fragment_home){
 
@@ -15,8 +16,12 @@ class HomeFragment : Fragment(R.layout.fragment_home){
         super.onViewCreated(view, savedInstanceState)
         val binding:FragmentHomeBinding = FragmentHomeBinding.bind(view)
 
-        binding.welcome.text = appuserf
 
+        if (status){
+            binding.welcome.text = "Welcome to Janim $appuserf!"
+        }else{
+            binding.welcome.text = "Welcome back $appuserf!"
+        }
     }
 
 }
