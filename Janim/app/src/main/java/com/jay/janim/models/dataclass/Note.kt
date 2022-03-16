@@ -6,6 +6,7 @@ import androidx.room.PrimaryKey
 data class Note (
     @PrimaryKey(autoGenerate = true)
     val id:Int,
+    val username:String,
     val title:String,
     val description:String,
     val status: Boolean,

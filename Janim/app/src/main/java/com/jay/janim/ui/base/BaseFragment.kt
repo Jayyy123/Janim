@@ -1,4 +1,9 @@
 package com.jay.janim.ui.base
 
-class BaseFragment {
+import androidx.fragment.app.Fragment
+
+class BaseFragment : Fragment() {
+
+    var appuserf = ""
+
 }

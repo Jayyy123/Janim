@@ -1,4 +1,11 @@
 package com.jay.janim.ui.base
 
-class BaseActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+open class BaseActivity: AppCompatActivity() {
+
+    var helper = false
+    var appuser = ""
+
+
 }

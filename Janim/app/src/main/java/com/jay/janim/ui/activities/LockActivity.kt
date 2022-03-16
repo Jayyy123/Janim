@@ -15,10 +15,13 @@ import com.jay.janim.databinding.ActivityLockBinding
 import com.jay.janim.models.database.UserDatabases
 import com.jay.janim.models.dataclass.User
 import com.jay.janim.models.repository.UserRepository
+import com.jay.janim.ui.base.BaseActivity
 import com.jay.janim.ui.viewmodels.LockViewModel
+import com.jay.janim.utils.Constants
 import com.jay.janim.utils.viewmodelproviderfactory.UserViewModelProviderFactory
+import com.jay.janim.utils.Constants.appuserf
 
-class LockActivity : AppCompatActivity() {
+class LockActivity : BaseActivity() {
 
     val TAG = ""
 
@@ -141,6 +144,8 @@ class LockActivity : AppCompatActivity() {
                 startActivity(Intent(this, MainActivity::class.java))
                 vmp.username = false
                 vmp.password = false
+                appuser = binding.username.text.toString()
+                appuserf = binding.username.text.toString()
                 finish()
             } else {
                 Toast.makeText(
@@ -181,6 +186,8 @@ class LockActivity : AppCompatActivity() {
                         "Welcome back $username",
                         Toast.LENGTH_SHORT
                     ).show()
+                    helper = true
+                    appuser = username
                     finish()
 
                 } else {

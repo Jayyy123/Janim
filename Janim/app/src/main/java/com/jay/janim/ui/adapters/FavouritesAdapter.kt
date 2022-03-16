@@ -36,6 +36,8 @@ class FavouritesAdapter : RecyclerView.Adapter<FavouritesAdapter.FavouritesViewH
         holder.binding.see.setOnClickListener {
             if (holder.binding.notetiitle.visibility != View.GONE){
                 holder.binding.notetiitle.visibility = View.GONE
+            }else{
+                holder.binding.notetiitle.visibility = View.VISIBLE
             }
         }
 

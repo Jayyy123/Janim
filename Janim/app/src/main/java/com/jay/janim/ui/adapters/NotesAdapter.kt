@@ -10,7 +10,7 @@ import com.jay.janim.models.dataclass.Note
 
 class NotesAdapter : RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
 
-    val notesList = ArrayList<Note>()
+    var notesList = ArrayList<Note>()
     val favList = ArrayList<Note>()
 
     inner class NotesViewHolder(val binding: NoterecyclersBinding) : RecyclerView.ViewHolder(binding.root)
