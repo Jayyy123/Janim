@@ -1,5 +1,6 @@
 package com.jay.janim.ui.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.jay.janim.R
 import com.jay.janim.databinding.FragmentProfileBinding
+import com.jay.janim.ui.activities.LockActivity
 import com.jay.janim.utils.Constants.appuserf
+import com.jay.janim.utils.Constants.notes
 
 class ProfileFragment : Fragment(R.layout.fragment_profile){
 
@@ -20,6 +23,13 @@ class ProfileFragment : Fragment(R.layout.fragment_profile){
 
 
         binding.username.text = appuserf
+        binding.favcount.text = "$notes Notes currently Available"
+
+
+        binding.logout.setOnClickListener {
+            startActivity(Intent(this.activity,LockActivity::class.java))
+            requireActivity().finish()
+        }
 
         binding.settings.setOnClickListener {
 

@@ -156,7 +156,7 @@ class MainActivity : BaseActivity() {
             binding.progressBar.visibility = View.VISIBLE
             handler.postDelayed({
                 binding.progressBar.visibility = View.GONE
-            },3000)
+            },1500)
 
         }
     }

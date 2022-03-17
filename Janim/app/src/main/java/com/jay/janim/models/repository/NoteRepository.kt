@@ -9,4 +9,6 @@ class NoteRepository(val database: NoteDatabase) {
 
     fun getAllNotes() = database.getNoteAccessDao().getallNotes()
 
+    suspend fun deleteNote(note: Note) = database.getNoteAccessDao().deletenote(note)
+
 }
